@@ -1,3 +1,5 @@
+import Animais.Cachorro;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -13,10 +15,15 @@ public class Main {
         * boolean	true or false
         * */
 
-        byte varByte = 120;
-        System.out.println(varByte);
+        Cachorro cachorro1 = new Cachorro();
 
-        int varInt = 11222333;
-        System.out.println(varInt);
+        cachorro1.nome = "Puppy";
+        cachorro1.cor = "Brown";
+        cachorro1.altura = 25;
+        cachorro1.peso = 5.5;
+        cachorro1.tamanhoDoRabo = 5;
+
+        System.out.println(cachorro1);
+
     }
 }
