@@ -29,5 +29,19 @@ public class Main {
         gato1.soar();
         passaro1.soar();
 
+        int a1; // int, long, byte = 0
+        float a2; // float e double = 0.0
+        boolean a3; // boolean (default) = false
+        char ch; // char = vazio
+        String str; // default de qualquer objeto = null
+
+        float x = 3.00f;
+        double y = 5.5d;
+
+        float z = x + (float) y; // casting
+        System.out.println(z);
+
+        int a = 23_567_098; // pode utilizar sublinhado no lugar de ponto para o número ser mais legível
+
     }
 }
