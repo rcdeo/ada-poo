@@ -15,19 +15,26 @@ public class Main {
          * boolean	true or false
          * */
 
+        // usando o construtor padrao
         Cachorro cachorro1 = new Cachorro();
-
-        cachorro1.nome = "Puppy";
-        cachorro1.cor = "Brown";
-        cachorro1.altura = 25;
-        cachorro1.peso = 5.5;
-        cachorro1.tamanhoDoRabo = 5;
+        cachorro1.setNome("Rex");
+        cachorro1.setCor("Brown");
+        cachorro1.setAltura(25);
+        cachorro1.setPeso(5.5);
+        cachorro1.setTamanhoDoRabo(5);
 
 //        cachorro1.latir(); // void
 //        System.out.println("O cachorro pegou uma " + cachorro1.pegar() + "."); // return string
 
         System.out.println("O cachorro está " + cachorro1.interagir("carinho") + ".");
-        System.out.println("O cachorro está " + cachorro1.interagir("nada") + ".");
         System.out.println("O cachorro está " + cachorro1.interagir("vai dormir") + ".");
+        System.out.println("O cachorro está " + cachorro1.interagir("pisar na patinha") + ".");
+        System.out.println("O cachorro está " + cachorro1.interagir("") + ".");
+
+        // usando o construtor adicionado
+        Cachorro cachorro2 = new Cachorro("Max", "Black", 35, 40.5, 15, "nada");
+        System.out.println(cachorro2.getNome());
+        System.out.println(cachorro2.getCor());
+
     }
 }
