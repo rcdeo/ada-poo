@@ -3,6 +3,7 @@ package Animais;
 public class Cachorro {
 
     // atributos
+    static int numeroDeCachorros;
     private String nome;
     private String cor;
     private int altura;
@@ -10,10 +11,7 @@ public class Cachorro {
     private int tamanhoDoRabo;
     private String estadoDeEspirito;
 
-    // construtores (padrao e adicionado)
-    public Cachorro() {
-    }
-
+    // construtores (definido pelo usuario)
     public Cachorro(String nome, String cor, int altura, double peso, int tamanhoDoRabo, String estadoDeEspirito) {
         this.nome = nome;
         this.cor = cor;
@@ -21,9 +19,18 @@ public class Cachorro {
         this.peso = peso;
         this.tamanhoDoRabo = tamanhoDoRabo;
         this.estadoDeEspirito = estadoDeEspirito;
+        numeroDeCachorros++; // add +1
     }
 
     // metodos
+    public static int getNumeroDeCachorros() {
+        return numeroDeCachorros;
+    }
+
+    public static void setNumeroDeCachorros(int numeroDeCachorros) {
+        Cachorro.numeroDeCachorros = numeroDeCachorros;
+    }
+
     public String getNome() {
         return nome;
     }
@@ -68,16 +75,16 @@ public class Cachorro {
         return estadoDeEspirito;
     }
 
-    public void comer() {
-    }
-
-    public void latir() {
-        System.out.println("Au, Au, Au");
-    }
-
-    public String pegar() {
-        return "bolinha";
-    }
+//    public void comer() {
+//    }
+//
+//    public void latir() {
+//        System.out.println("Au, Au, Au");
+//    }
+//
+//    public String pegar() {
+//        return "bolinha";
+//    }
 
     public String interagir(String acao) {
 
@@ -98,4 +105,10 @@ public class Cachorro {
         return this.estadoDeEspirito;
     }
 
+    @Override
+    public String toString() {
+        return "Cachorro{" +
+                "nome='" + nome + '\'' +
+                '}';
+    }
 }
